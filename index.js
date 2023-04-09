@@ -17,7 +17,6 @@ app.get("/", function (req, res) {
       urlResult: result,
     });
   });
-  res.send("Welcome");
 });
 
 app.post("/create", function (req, res) {
@@ -29,6 +28,7 @@ app.post("/create", function (req, res) {
     if (err) throw err;
     console.log(data);
   });
+  res.send(urlShort)
 });
 
 app.get("/:urlID", function (req, res) {
